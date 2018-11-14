@@ -18,7 +18,7 @@ var filesToCache = [
   `${HOST}/js/app.js`,
   `${HOST}/js/script.js`,
   `${HOST}/js/service-worker.js`,
-  `${HOST}/js/tarefa.js`,
+  `${HOST}/js/tarefas.js`,
   `${HOST}/js/wallet.js`,
   `${HOST}/lib/bulma.css`,
   `${HOST}/index.html`,
