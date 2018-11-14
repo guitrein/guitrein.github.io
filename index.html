@@ -1,1 +1,42 @@
-Hello !!!
+Hello !!!<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/bulma.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/store.js"></script>
+
+    <title>Safe Box</title>
+</head>
+
+<body>
+    <section class="section"></section>
+        <div class="container">
+            <div id="usuario">
+                <span><img src="img/perfil.png">
+                <p>Usuario</p>
+                <p class id="saldo">Saldo :</p>
+                </span>
+            </div>
+            <div id="lucro">
+                <span id="span_pos"></span>
+            </div>
+            <div id="gasto">
+                <span id="span_neg"></span>
+            </div>
+            <br>
+            <div id="operacao">
+                <input type="button" id="botao_adicionar" value="+">
+                <input type="button" id="botao_diminuir" value="-">
+                <ul id="lista">
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+    <script src="js/tarefas.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+body{
+
+}
+#usuario{
+    background-color: #E6E6FA;
+    height: 200px;
+    width: 48%;
+    float:left;
+    position: relative;
+}
+#usuario > span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 40%;
+}
+#lucro{
+    background-color: #75db7c;
+    height: 90px;
+    width: 48%;
+    float: right;
+    text-align: center;
+    position: relative;
+}
+#lucro > span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#gasto{
+    background-color: #e96d68;
+    height: 90px;
+    width: 48%;
+    float: right;
+    text-align:center;
+    position: relative;
+}
+#gasto > span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#operacao{
+    background-color: #d4d4d4;
+    height: 98%;
+    float: left;
+    width: 98%;
+    text-align: center;
+}
+div{
+ margin: 1%;
+}
