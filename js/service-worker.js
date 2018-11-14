@@ -2,7 +2,7 @@ const HOST='https://guitrein.github.io'
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
-    .register(`${HOST}/service-worker.js`)
+    .register(`${HOST}/js/service-worker.js`)
     .then(function () { console.log('Service Worker Registered'); });
 }
 
@@ -10,6 +10,11 @@ var cacheName = 'todo-app';
 var filesToCache = [
   `${HOST}/css/style.css`,
   `${HOST}/img/perfil.png`,
+  `${HOST}/img/icons/icon-128x128.png`,
+  `${HOST}/img/icons/icon-144x144.png`,
+  `${HOST}/img/icons/icon-152x152.png`,
+  `${HOST}/img/icons/icon-192x192.png`,
+  `${HOST}/img/icons/icon-256x256.png`,
   `${HOST}/js/app.js`,
   `${HOST}/js/script.js`,
   `${HOST}/js/service-worker.js`,
