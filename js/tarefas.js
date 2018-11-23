@@ -30,6 +30,7 @@ let atualizar = (itens) => {
         btnExcluir.value = 'Excluir';
         btnExcluir.onclick = () => {
             lista.remover(idx);
+            console.log(lista.vetor);
             atualizar(lista.vetor());
 
         }
