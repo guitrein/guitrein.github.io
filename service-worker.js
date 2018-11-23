@@ -2,7 +2,7 @@ const HOST='https://guitrein.github.io'
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
-    .register(`${HOST}/js/service-worker.js`)
+    .register(`${HOST}/service-worker.js`)
     .then(function () { console.log('Service Worker Registered'); });
 }
 
@@ -17,7 +17,7 @@ var filesToCache = [
   `${HOST}/img/icons/icon-256x256.png`,
   `${HOST}/js/app.js`,
   `${HOST}/js/script.js`,
-  `${HOST}/js/service-worker.js`,
+  `${HOST}/service-worker.js`,
   `${HOST}/js/tarefas.js`,
   `${HOST}/js/wallet.js`,
   `${HOST}/lib/bulma.css`,
