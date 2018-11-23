@@ -1,4 +1,3 @@
-const nome_tarefa = document.getElementById('texto_tarefa')
 const botao_add = document.getElementById('botao_adicionar')
 const botao_dim = document.getElementById('botao_diminuir')
 
@@ -38,7 +37,10 @@ let atualizar = (itens) => {
         btnEditar.type = 'button';
         btnEditar.value = 'Editar';
         btnEditar.onclick = () => {
-            lista.editar(idx, nome_tarefa.value);
+            do{
+                var selection = parseInt(window.prompt("Digite um valor", ""), 10);
+            }while(isNaN(selection) || selection > -65535 || selection < 65535);
+            lista.editar(idx,selection);
             atualizar(lista.vetor());
 
         }

@@ -1,7 +1,6 @@
 const HOST='https://guitrein.github.io'
 
 if ('serviceWorker' in navigator) {
-  console.log("tem serviceWorker");
   navigator.serviceWorker
     .register(`${HOST}/service-worker.js`)
     .then(function () { console.log('Service Worker Registered'); });
