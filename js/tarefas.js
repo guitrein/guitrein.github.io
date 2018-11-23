@@ -26,10 +26,6 @@ let atualizar = (itens) => {
         let btnExcluir = document.createElement('input');
         let btnEditar = document.createElement('input');
 
-        span_pos.innerHTML = "R$ 0";
-        span_neg.innerHTML = "R$ 0";
-        saldo.innerHTML = "Saldo : R$ 0";
-
         btnExcluir.type = 'button';
         btnExcluir.value = 'Excluir';
         btnExcluir.onclick = () => {
@@ -55,11 +51,11 @@ let atualizar = (itens) => {
         }else{
             valor_neg += i;
         }
-        span_pos.innerHTML = "R$" + valor_pos +"( "+ (valor_pos/(valor_pos-valor_neg)*100).toFixed(2) +"% )";
-        span_neg.innerHTML = "R$" + valor_neg +"( "+ (valor_neg/(valor_neg-valor_pos)*100).toFixed(2) +"% )";
-        saldo.innerHTML = "Saldo : R$" + (valor_pos+valor_neg);
 
     });
+    span_pos.innerHTML = "R$" + valor_pos +"( "+ (valor_pos/(valor_pos-valor_neg)*100).toFixed(2) +"% )";
+    span_neg.innerHTML = "R$" + valor_neg +"( "+ (valor_neg/(valor_neg-valor_pos)*100).toFixed(2) +"% )";
+    saldo.innerHTML = "Saldo : R$" + (valor_pos+valor_neg);
 }
 
 botao_add.addEventListener('click', (e) => {
@@ -81,5 +77,3 @@ botao_dim.addEventListener('click', (e) => {
     atualizar(lista.vetor());
 
 });
-
-atualizar(lista.vetor());
