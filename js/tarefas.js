@@ -39,7 +39,7 @@ let atualizar = (itens) => {
         btnEditar.onclick = () => {
             do{
                 var selection = parseInt(window.prompt("Digite um valor", ""), 10);
-            }while(isNaN(selection) || selection > -65535 || selection < 65535);
+            }while(isNaN(selection);
             lista.editar(idx,selection);
             atualizar(lista.vetor());
 
