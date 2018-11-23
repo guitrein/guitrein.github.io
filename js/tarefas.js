@@ -3,7 +3,6 @@ const botao_dim = document.getElementById('botao_diminuir')
 
 let lista = new ToDo();
 
-
 let atualizar = (itens) => {
     let valor_pos = 0;
     let valor_neg = 0;
@@ -20,7 +19,7 @@ let atualizar = (itens) => {
     }
     //mostra todos os itens criados
     itens.forEach((i, idx) => {
-        
+
         let li = document.createElement('li');
         let btnExcluir = document.createElement('input');
         let btnEditar = document.createElement('input');
@@ -37,10 +36,10 @@ let atualizar = (itens) => {
         btnEditar.type = 'button';
         btnEditar.value = 'Editar';
         btnEditar.onclick = () => {
-            do{
+            do {
                 var selection = parseInt(window.prompt("Digite um valor", ""), 10);
-            }while(isNaN(selection));
-            lista.editar(idx,selection);
+            } while (isNaN(selection));
+            lista.editar(idx, selection);
             atualizar(lista.vetor());
 
         }
@@ -49,22 +48,22 @@ let atualizar = (itens) => {
         li.appendChild(btnExcluir);
         li.appendChild(btnEditar);
         p.appendChild(li);
-        if(i > 0 ){
+        if (i > 0) {
             valor_pos += i;
-        }else{
+        } else {
             valor_neg += i;
         }
 
     });
-    span_pos.innerHTML = "R$" + valor_pos +"( "+ (valor_pos/(valor_pos-valor_neg)*100).toFixed(2) +"% )";
-    span_neg.innerHTML = "R$" + valor_neg +"( "+ (valor_neg/(valor_neg-valor_pos)*100).toFixed(2) +"% )";
-    saldo.innerHTML = "Saldo : R$" + (valor_pos+valor_neg);
+    span_pos.innerHTML = "R$" + valor_pos + "( " + (valor_pos / (valor_pos - valor_neg) * 100).toFixed(2) + "% )";
+    span_neg.innerHTML = "R$" + valor_neg + "( " + (valor_neg / (valor_neg - valor_pos) * 100).toFixed(2) + "% )";
+    saldo.innerHTML = "Saldo : R$" + (valor_pos + valor_neg);
 }
 
 botao_add.addEventListener('click', (e) => {
-    do{
+    do {
         var selection = parseInt(window.prompt("Digite um valor", ""), 10);
-    }while(isNaN(selection) || selection < 0);
+    } while (isNaN(selection) || selection < 0);
 
     lista.adicionar(selection);
     atualizar(lista.vetor());
@@ -72,9 +71,9 @@ botao_add.addEventListener('click', (e) => {
 });
 
 botao_dim.addEventListener('click', (e) => {
-    do{
+    do {
         var selection = parseInt(window.prompt("Digite um valor", ""), 10);
-    }while(isNaN(selection) || selection > 0);
+    } while (isNaN(selection) || selection > 0);
 
     lista.adicionar(selection);
     atualizar(lista.vetor());
