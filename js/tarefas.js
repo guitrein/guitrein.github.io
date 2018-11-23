@@ -26,6 +26,10 @@ let atualizar = (itens) => {
         let btnExcluir = document.createElement('input');
         let btnEditar = document.createElement('input');
 
+        span_pos.innerHTML = "R$ 0";
+        span_neg.innerHTML = "R$ 0";
+        saldo.innerHTML = "Saldo : R$ 0";
+
         btnExcluir.type = 'button';
         btnExcluir.value = 'Excluir';
         btnExcluir.onclick = () => {
