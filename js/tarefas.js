@@ -82,3 +82,4 @@ botao_dim.addEventListener('click', (e) => {
 
 });
 
+atualizar(lista.vetor());
