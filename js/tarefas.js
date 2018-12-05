@@ -62,7 +62,7 @@ let atualizar = (itens) => {
 
 botao_add.addEventListener('click', (e) => {
     do {
-        var selection = parseInt(window.prompt("Digite um valor", ""), 10);
+        var selection = parseInt(window.prompt("Digite um valor positivo", ""), 10);
     } while (isNaN(selection) || selection < 0);
 
     lista.adicionar(selection);
@@ -72,7 +72,7 @@ botao_add.addEventListener('click', (e) => {
 
 botao_dim.addEventListener('click', (e) => {
     do {
-        var selection = parseInt(window.prompt("Digite um valor", ""), 10);
+        var selection = parseInt(window.prompt("Digite um valor negativo", ""), 10);
     } while (isNaN(selection) || selection > 0);
 
     lista.adicionar(selection);
