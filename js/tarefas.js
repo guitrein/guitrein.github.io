@@ -73,11 +73,11 @@ botao_add.addEventListener('click', (e) => {
 });
 
 botao_dim.addEventListener('click', (e) => {
-    do {
-        var selection = parseInt(window.prompt("Digite um valor negativo", ""), 10);
-    } while (isNaN(selection) || selection > 0);
-
-    lista.adicionar(selection);
-    atualizar(lista.vetor());
+    var selection = parseInt(window.prompt("Digite um valor negativo", ""), 10);
+    console.log('valor '+selection);
+    if (selection < 0) {
+        lista.adicionar(selection);
+        atualizar(lista.vetor());
+    }
 
 });
