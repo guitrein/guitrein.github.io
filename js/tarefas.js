@@ -62,6 +62,7 @@ let atualizar = (itens) => {
 
 botao_add.addEventListener('click', (e) => {
     var selection = parseInt(window.prompt("Digite um valor positivo", ""), 10);
+    console.log('valor '+selection);
     if (selection >= 0) {
         lista.adicionar(selection);
         atualizar(lista.vetor());
