@@ -61,15 +61,13 @@ let atualizar = (itens) => {
 }
 
 botao_add.addEventListener('click', (e) => {
-   var selection = parseInt(window.prompt("Digite um valor positivo", ""), 10);
-   if (isNaN(selection) || selection < 0) {
-        
-    } else {
-        
+    var selection = parseInt(window.prompt("Digite um valor positivo", ""), 10);
+    if (selection < 0) {
+        lista.adicionar(selection);
+        atualizar(lista.vetor());
     }
 
-    lista.adicionar(selection);
-    atualizar(lista.vetor());
+
 
 });
 
