@@ -1,6 +1,18 @@
 const ToDo = function () {
+
     var notas = [];
     return {
+        /*
+        _parse(d) {
+            return JSON.parse(d);
+          }
+        
+          _stringify(d) {
+            return JSON.stringify(d);
+          }
+        */
+
+
         adicionar: (valor) => {
             notas.push(valor);
         },
